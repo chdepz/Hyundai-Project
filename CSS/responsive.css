@@ -1,0 +1,176 @@
+  @media screen and (max-width: 860px) {
+    main .slogan {
+      position: absolute;
+      width: 100%;
+      margin: 0;
+      margin-top: 50%;
+      justify-content: center;
+      align-items: center;
+      z-index: -1;
+    }
+    main .slogan h3 {
+      font-size: 18px;
+    }
+    main .quote {
+      display: none;
+    }
+    .services__container {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #products {
+      height: 100vh;
+    }
+    .products__container {
+      flex-direction: column;
+    }
+    .left__cl {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 30px 0px 0px 30px;
+      gap: 1rem;
+    }
+    .left__cl h1 {
+      letter-spacing: 0.5rem;
+      font-size: 30px;
+      font-weight: 400;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    .fa-arrow-down {
+      font-size: 20px;
+    }
+    .left__cl p {
+      text-align: justify;
+      font-size: 15px;
+      line-height: 1.5rem;
+    }
+    .right__cl {
+      width: 90%;
+      height: 45%;
+      margin: auto;
+      margin-top: 10px;
+    }
+    #Affiliates__Program {
+      width: 100%;
+      height: 100vh;
+      /* margin-top: 30px; */
+      background-color: #e1e1e1;
+      color: #184f42;
+    }
+    .Affiliates_title {
+      margin: 0px 83px 0px 40px;
+      line-height: 2rem;
+    }
+    .Affiliates_title h3 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .Affiliates_Showcase {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      margin: 20px auto;
+    }
+    .Aff__cards {
+      display: flex;
+      width: 100%;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 25px;
+    }
+    #contacts form {
+      width: 90%;
+      margin-top: 20px;
+      background-color: #184f42;
+      color: #d5d5d5;
+      padding: 10px;
+    }
+    .Navigation {
+      width: 100%;
+      height: 90vh;
+    }
+    .Navigation .container2 {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: 90vh;
+      gap: 2rem;
+    }
+    .Navigation p {
+      padding-top: 5px;
+      line-height: normal;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    #Affiliates__Program {
+      width: 100%;
+      height: 80vh;
+    }
+    .Affiliates_title {
+      margin: 0px 83px 0px 40px;
+      line-height: 2rem;
+    }
+    .Aff__cards {
+      margin-left: 20px;
+    }
+    .Aff__cards img {
+      width: 80%;
+    }
+    .ar {
+      height: 15vh;
+    }
+    #contacts form {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .Navigation {
+      align-items: center;
+      background-color: #c1c9c6;
+      width: 100%;
+      height: 100vh;
+    }
+    .Navigation .container2 {
+      margin-top: 10px;
+      flex-direction: column;
+      width: 90%;
+      height: 100vh;
+      gap: 2rem;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    #Affiliates__Program {
+      width: 100%;
+      height: 80vh;
+    }
+    .Affiliates_title {
+      margin: 0px 83px 0px 30px;
+      line-height: 2rem;
+    }
+
+    .Aff__cards {
+      margin-left: 18px;
+    }
+    #contacts form {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+    }
+    .Navigation {
+      width: 100%;
+      height: 100vh;
+    }
+    .Navigation .container2 {
+      margin-top: 10px;
+      width: 90%;
+    }
+  }

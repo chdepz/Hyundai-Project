@@ -1,0 +1,477 @@
+    /* CSS reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* outline: 1px solid; */
+    }
+    :root {
+      --colorBg: #173e35;
+      --colorFont: white;
+      --textXL: 1.5rem;
+      --textL: 1.2rem;
+      --textSm: 1rem;
+      --fontFm: "Roboto", sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: var(--colorBg);
+      color: var(--colorFont);
+      font-family: var(--fontFm);
+      /* height: 100vh; {Giving height is causing position sticky problem on header nav} */
+      width: 100%;
+    }
+    /* styling header */
+    header {
+      width: 100%;
+      display: flex;
+      /* border: 1px solid white; */
+      margin: 0 auto;
+      line-height: 80px;
+      justify-content: space-between;
+      background-color: #e1e1e1;
+      color: black;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      /* box-shadow: 0px 0px 10px rgba(0,0,0, 0.3); */
+      border-radius: 2px;
+    }
+    /* styling logo */
+    header .logo {
+      display: flex;
+      line-height: 80px;
+      margin-left: 45px;
+      font-size: var(--textXL);
+      font-weight: 450px;
+      color: black;
+      gap: 0.5rem;
+    }
+    header .logo .fa-car {
+      font-size: 28px;
+    }
+    /* styling nav__list */
+    .logo #check {
+      display: none;
+    }
+    .logo #checkbtn {
+      display: none;
+      position: absolute;
+      right: 20px;
+      line-height: 80px;
+      font-size: 1.8rem;
+    }
+    .logo #check:checked ~ .nav__list ul {
+      right: 0;
+    }
+
+    .nav__list {
+      position: absolute;
+      right: 50px;
+      line-height: 80px;
+    }
+    .nav__list ul {
+      list-style: none;
+    }
+    .nav__list ul li {
+      display: inline-block;
+      /* padding-left: 10px; */
+    }
+    .nav__list ul li a {
+      margin-right: 40px;
+      text-decoration: none;
+      font-size: 17px;
+      color: rgb(24, 24, 24);
+      font-weight: 100;
+    }
+    /* media queries for responsiveness of Nav__List */
+
+    @media screen and (max-width: 960px) {
+      header {
+        width: 100%;
+      }
+      header .logo {
+        margin-left: 10px;
+      }
+      .nav__list ul::after {
+        position: fixed;
+        content: "Copyright@Dipak_Chaudhary";
+        color: white;
+        font-size: 15px;
+        bottom: 10px;
+        font-family: var(--fontFm);
+        font-weight: 300;
+      }
+
+      .nav__list ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        height: 90vh;
+        background-color: #173e35;
+        position: fixed;
+        line-height: 50px;
+        top: 80px;
+        right: -100%;
+        transition: 0.6s;
+        overflow: hidden;
+      }
+      .nav__list ul li a {
+        color: white;
+      }
+
+      .logo #checkbtn {
+        display: block;
+      }
+    }
+    /* header Section Ends */
+
+    /* home section css */
+    main {
+      position: relative;
+      display: flex;
+      /* flex-direction: column; */
+      width: 100%;
+      height: 100vh;
+    }
+    main::before {
+      position: absolute;
+      content: "";
+      background: url(https://source.unsplash.com/w37l_Ub9PAI) no-repeat center
+        center/cover;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 0;
+      /* right: 0; */
+      z-index: -1;
+      opacity: 0.6;
+    }
+    main .slogan {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: 100px 83px 0px 83px;
+
+      color: #14322b;
+      gap: 2rem;
+      z-index: -1;
+    }
+    .slogan h3 {
+      font-size: 30px;
+    }
+    .btn1 {
+      border: none;
+      width: 40%;
+      background-color: #14322b;
+      line-height: 50px;
+      color: white;
+    }
+    .btn1 a {
+      font-size: 15px;
+      text-decoration: none;
+      color: white;
+    }
+    .btn1:hover {
+      background-color: #184f42 !important;
+      transition: 0.5s;
+    }
+    main .quote {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-top: 250px;
+      /* margin: 0px 0px; */
+      gap: 1rem;
+      z-index: -1;
+    }
+    main .quote p {
+      color: #14322b;
+      font-size: 1.3rem;
+
+      line-height: 2rem;
+    }
+    /* home section css ends */
+
+    /* services section starts */
+
+    #services {
+      display: flex;
+      flex-direction: column;
+      /* height: 40vh; */
+      width: 100%;
+    }
+    #services h2 {
+      /* width: 80%; */
+      background-color: #d5cdcd;
+      color: black;
+      text-align: center;
+      padding: 10px;
+      font-size: 30px;
+      font-weight: 400;
+    }
+    .services__container {
+      display: flex;
+      width: 80%;
+
+      margin: auto;
+      margin-top: 30px;
+      gap: 3rem;
+    }
+    .services__cards {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      padding: 10px;
+      min-height: 30vh;
+      gap: 1.3rem;
+      text-align: center;
+      box-shadow: 0px 0px 10px rgba(250, 250, 250, 0.5);
+      border-radius: 5px;
+    }
+    .fa-solid {
+      font-size: 40px;
+      align-self: center;
+    }
+    .services__cards h3 {
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+    }
+    .services__cards p {
+      font-weight: 200;
+      line-height: 1.5rem;
+    }
+    /* Services css ends */
+
+    /* products css starts here */
+    #products {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      margin-top: 40px;
+      background-color: #e1e1e1;
+      color: #14322b;
+    }
+    #products h3 {
+      background-color: #14322b;
+      color: white;
+      padding: 10px;
+      font-weight: 400;
+      font-size: 30px;
+      text-align: center;
+    }
+    .products__container {
+      display: flex;
+    }
+    .left__cl {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      margin: 50px 83px 0px 83px;
+      gap: 1rem;
+    }
+    .left__cl h1 {
+      letter-spacing: 0.5rem;
+      font-size: 30px;
+      font-weight: 400;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+    .left__cl p {
+      line-height: 1.5rem;
+    }
+    .right__cl {
+      display: flex;
+      width: 50%;
+      height: 80%;
+      margin-right: 40px;
+      margin-top: 25px;
+    }
+    .right__cl img {
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+    }
+
+    /* Products Section Css ends here */
+
+    /* Affiliates Program section css starts */
+
+    #Affiliates__Program {
+      width: 100%;
+      height: 150vh;
+      /* margin-top: 30px; */
+      background-color: #e1e1e1;
+      color: #184f42;
+    }
+    .Affiliates_title {
+      margin: 0px 83px 0px 87px;
+      line-height: 2.5rem;
+    }
+    .Affiliates_title h3 {
+      font-size: 30px;
+      font-weight: 500;
+    }
+    .Affiliates_title p {
+      font-size: 17px;
+    }
+    .Affiliates_Showcase {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: 80px auto;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 10px rgba(17, 59, 58, 0.7);
+      border-radius: 10px;
+    }
+    .Affiliates_Showcase h3 {
+      font-size: 20px;
+    }
+    .Affiliates_Showcase .parts {
+      display: flex;
+      /* flex-direction: column; */
+      gap: 3rem;
+      line-height: 100px;
+      justify-content: center;
+    }
+    .Affiliates_Showcase .fa-caret-down {
+      font-size: 40px;
+      line-height: 90px;
+    }
+
+    .Aff__cards {
+      display: flex;
+      width: 100%;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 40px;
+    }
+    .Aff__cards img {
+      width: 90%;
+    }
+    .ar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e1e1e1;
+      height: 20vh;
+    }
+    .ar img {
+      margin-right: 65px;
+      height: 60%;
+    }
+    #contacts {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: #e1e1e1;
+      height: 100vh;
+      align-items: center;
+    }
+    #contacts h3 {
+      font-size: 25px;
+      font-weight: 400;
+      color: #184f42;
+    }
+    .contact_form {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      padding: 40px;
+      margin: 10px auto;
+
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+    }
+    #contacts form {
+      width: 50%;
+      margin-top: 20px;
+      background-color: #184f42;
+      color: #d5d5d5;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+    #contacts form input[type="text"] {
+      border: 1px solid;
+      margin-top: 5px;
+      padding: 10px;
+      background-color: #184f42;
+      color: white;
+      border-radius: 4px;
+    }
+    #contacts form textarea {
+      margin-top: 5px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #4d4d4d;
+      color: white;
+    }
+    #contacts form input[type="button"] {
+      border: none;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 17px;
+      letter-spacing: 0.2rem;
+      color: black;
+    }
+
+    .Navigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #c1c9c6;
+      width: 100%;
+      height: 60vh;
+    }
+    .Navigation .container2 {
+      display: flex;
+      width: 80%;
+      height: 50vh;
+      gap: 5rem;
+    }
+    .Navigation h2 {
+      color: #184f42;
+      font-size: 20px;
+    }
+    .Navigation ul {
+      margin-top: 5px;
+      list-style: none;
+    }
+    .Navigation ul li {
+      padding-top: 5px;
+    }
+    .Navigation ul li a {
+      color: #14322b;
+    }
+    .Navigation p {
+      padding-top: 5px;
+      color: #14322b;
+      line-height: 1.5rem;
+    }
+    footer .container2 .box1 {
+      width: 40%;
+    }
+
+    .madeby {
+      display: flex;
+      height: 50px;
+      background-color: #14322b;
+      justify-content: center;
+      align-items: center;
+    }
+    .madeby h3 {
+      font-weight: 400;
+    }
